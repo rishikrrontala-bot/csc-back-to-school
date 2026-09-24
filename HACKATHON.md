@@ -6,6 +6,14 @@
 
 *Facts read from the live Devpost page on 2026-09-23. ⚠ = unconfirmed, so verify before relying on it.*
 
+## Verification (cloud session, Wed Sep 23 2026, 23:40 EDT)
+This VM's network policy blocks devpost.com, so the overview and `/rules` pages **could not be re-opened** from the cloud session (curl and WebFetch both get `403` from the egress proxy; see PROGRESS.md). What could be cross-checked independently:
+- **Dates:** the ushackathons.com listing (read through WebSearch) gives **Sep 4 to Oct 5, 2026**, online. That agrees with the deadline above (Oct 5 · 12:00 AM PDT = 3:00 AM EDT). ✔
+- **Organiser ⚠:** the same listing names it **"Webb Schools CSC"**, i.e. most likely the Computer Science Club of The Webb Schools (Claremont, CA, grades 9–12). One aggregator source only.
+- **Audience:** "free, high school, beginner-friendly" (same listing), consistent with *Ages 13–18, students only* below. ✔
+- **Prizes, rubric wording, submission list:** no second source exists in the index; they stand as captured on 2026-09-23.
+- **Nothing contradicts the file.** HANDOFF.md step 1 asks Rishik to eyeball the live overview and rules pages before submitting.
+
 ## Eligibility
 Ages 13–18, students only, individuals or teams up to 4.
 
