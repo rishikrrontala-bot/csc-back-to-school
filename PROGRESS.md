@@ -14,6 +14,7 @@ Running log for the unattended cloud build. A resumed session starts here.
 | Wed Sep 23 2026 · 10:38 PM EDT | 268.4 h | 0: setup, PROGRESS.md, tool check |
 | Wed Sep 23 2026 · 10:40 PM EDT | 268.3 h | 1–3: research, concepts, pick |
 | Wed Sep 23 2026 · 10:52 PM EDT | 268.1 h | 4: design direction |
+| Wed Sep 23 2026 · 10:56 PM EDT | 268.1 h | 5: build (engine first) |
 
 ## Phase plan (budgeted backwards, hackathon-win Phase 4 table)
 
@@ -52,3 +53,22 @@ Running log for the unattended cloud build. A resumed session starts here.
 - 7 winner briefs (5 from the Congressional App Challenge 2025 district winners, 2 from DualHacks 2023, age-flagged) → `research/winners/`. `research/RESEARCH-BRIEF.md` written.
 - `scripts/siblings.sh`: only practicetocreate has claimed a concept (**Low Sun**, a commute glare calendar). No overlap.
 - 3 concepts scored (`research/CONCEPTS.md`): **A Between Bells 4.40** · B Syllabus X-ray 4.00 · C Fair Seats 3.80. **Picked A.** `CONCEPT.md` pushed.
+
+### Phase 4: design direction (Wed Sep 23 · 10:52 → 10:56 PM EDT · 268.1 h left)
+- impeccable (fallback clone) `context` → no PRODUCT.md → init. Rishik is unavailable (stated in the brief), so the interview was replaced by the explicit brief; inferences are labelled in `PRODUCT.md`.
+- Direction roll: `impeccable concept-seed --scope direction --mode operate` ran **degraded** (impeccable.style is blocked, so there were no challengers or quality boards) and assigned index 5 of the grounded list: **the transit line diagram** (seed `6f18a518`). Raises from the evacuation plan, the construction drawing and the ADA plaque are recorded in `DESIGN.md`.
+- `DESIGN.md` (pre-build tokens: Overpass / Atkinson Hyperlegible Next + Mono, a full palette of 7 line colours + alert red, a motion grammar) and the surface brief `.impeccable/surfaces/index-html.md` (direction contract) written. Code-led (no image generation here).
+
+### Phase 5: build (started Wed Sep 23 · 10:56 PM EDT)
+- Scaffold: Vite 8.3, TS 5.9, Vitest 5.0.1, **@playwright/test 1.56.1** (matches the preinstalled chromium-1194), jsdom, @fontsource (Overpass, Atkinson Hyperlegible Next/Mono), lz-string, qrcode-generator. `vite.config.ts` has `base: './'`.
+- Engine written and typechecking: `src/engine/types.ts`, `profiles.ts` (cited speed ranges), `route.ts` (graph + Dijkstra on midpoint time, interval sums), `schedule.ts` (transitions, verdicts fits/tight/short, early-release minutes sized on quiet halls, formatting).
+
+## RESUME HERE (for a fresh session)
+Next, in order:
+1. `src/engine/directions.ts`: turn-by-turn text from route geometry and map labels only (left/right from the cross product; "take Elevator E1 to Floor 2"; "Room 204 is on your left").
+2. `src/engine/share.ts`: lz-string encode/decode of {map?, schedule, profile, options} in the URL hash; validate on decode.
+3. `src/data/sample-school.ts`: synthetic "Northgate High (sample)", 2 floors + gym annex via ramp, West/East/Center stairs, one elevator E1; a sample schedule where walking fits everything and crutches makes about 2 transitions short.
+4. `tests/*.test.ts`: Vitest for profiles/route/schedule/directions/share/sample.
+5. UI (`src/main.ts`, `src/ui/*`, `src/styles.css`, `index.html`) per DESIGN.md: plan SVG (true scale, both floors), departure board, mode selector, Play my day (WAAPI dot + stroke draw), Pass (accommodation summary, print CSS), directions strip, Trace editor (image upload, orthogonal-snap corridors, rooms, stairs/elevator, scale from a known length), Share link + QR.
+6. e2e (`e2e/*.spec.ts`), CI workflow `.github/workflows/ci.yml`, deploy check through the GitHub API (the Pages URL is blocked from this VM).
+7. Then quality passes, video, submission kit, docs, merge to main, HANDOFF.md (see CLAUDE.md › Definition of done).
