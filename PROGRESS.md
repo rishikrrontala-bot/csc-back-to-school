@@ -63,12 +63,15 @@ Running log for the unattended cloud build. A resumed session starts here.
 - Scaffold: Vite 8.3, TS 5.9, Vitest 5.0.1, **@playwright/test 1.56.1** (matches the preinstalled chromium-1194), jsdom, @fontsource (Overpass, Atkinson Hyperlegible Next/Mono), lz-string, qrcode-generator. `vite.config.ts` has `base: './'`.
 - Engine written and typechecking: `src/engine/types.ts`, `profiles.ts` (cited speed ranges), `route.ts` (graph + Dijkstra on midpoint time, interval sums), `schedule.ts` (transitions, verdicts fits/tight/short, early-release minutes sized on quiet halls, formatting).
 
+### Paused by Rishik: Wed Sep 23 · 11:03 PM EDT (267.9 h left)
+Rishik asked to push everything and stop at 11:06 PM ET. State at the pause:
+- **Done:** research, concepts, CONCEPT.md, PRODUCT.md, DESIGN.md, direction contract, scaffold, and the full engine: `types`, `profiles`, `route`, `schedule`, `directions` (natural phrasing, labels only, times sum to the route), `share` (lz-string, validated decode), `builder`, plus `src/data/sample-school.ts` (synthetic Northgate High).
+- **Tests:** `npx vitest run` → **5 files, 35 tests, all passing**; `npx tsc --noEmit` clean.
+- **Sample results** (typical crowds, 5-min passing): walking fits all 6 transitions; crutches: 1 short + 4 tight (early release 3–5 min on the long ones); wheelchair: 4 tight.
+- **Not started yet:** the UI, e2e, CI workflow, deploy, video, docs, submission kit, HANDOFF.
+
 ## RESUME HERE (for a fresh session)
-Next, in order:
-1. `src/engine/directions.ts`: turn-by-turn text from route geometry and map labels only (left/right from the cross product; "take Elevator E1 to Floor 2"; "Room 204 is on your left").
-2. `src/engine/share.ts`: lz-string encode/decode of {map?, schedule, profile, options} in the URL hash; validate on decode.
-3. `src/data/sample-school.ts`: synthetic "Northgate High (sample)", 2 floors + gym annex via ramp, West/East/Center stairs, one elevator E1; a sample schedule where walking fits everything and crutches makes about 2 transitions short.
-4. `tests/*.test.ts`: Vitest for profiles/route/schedule/directions/share/sample.
+Engine steps 1–4 are done (directions, share, sample school, Vitest). Continue with:
 5. UI (`src/main.ts`, `src/ui/*`, `src/styles.css`, `index.html`) per DESIGN.md: plan SVG (true scale, both floors), departure board, mode selector, Play my day (WAAPI dot + stroke draw), Pass (accommodation summary, print CSS), directions strip, Trace editor (image upload, orthogonal-snap corridors, rooms, stairs/elevator, scale from a known length), Share link + QR.
 6. e2e (`e2e/*.spec.ts`), CI workflow `.github/workflows/ci.yml`, deploy check through the GitHub API (the Pages URL is blocked from this VM).
 7. Then quality passes, video, submission kit, docs, merge to main, HANDOFF.md (see CLAUDE.md › Definition of done).
