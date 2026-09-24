@@ -1,6 +1,6 @@
 # CONCEPT: Between Bells
 
-**Event:** CSC Back-to-School Hackathon · **Lane:** school life beyond studying: accessibility + campus logistics · **Claimed:** Wed Sep 23 2026, 23:50 EDT
+**Event:** CSC Back-to-School Hackathon · **Lane:** school life beyond studying: accessibility + campus logistics · **Claimed:** Wed Sep 23 2026, 22:51 EDT
 
 **One line:** *Every passing period, timed for the way you move.* Between Bells times each transition on your schedule for how you actually get around (walking, on crutches, in a wheelchair), finds the route that works (elevator, ramp, fewer stairs), and turns a vague "needs extra time between classes" into exact minutes you can take to your school.
 

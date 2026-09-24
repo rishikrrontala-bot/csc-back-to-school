@@ -12,8 +12,8 @@ Running log for the unattended cloud build. A resumed session starts here.
 | Phase start (ET) | Hours to deadline | Phase |
 |---|---|---|
 | Wed Sep 23 2026 · 10:38 PM EDT | 268.4 h | 0: setup, PROGRESS.md, tool check |
-| Wed Sep 23 2026 · 10:45 PM EDT | 268.3 h | 1–3: research, concepts, pick |
-| Wed Sep 23 2026 · 11:55 PM EDT | 267.1 h | 4: design direction |
+| Wed Sep 23 2026 · 10:40 PM EDT | 268.3 h | 1–3: research, concepts, pick |
+| Wed Sep 23 2026 · 10:52 PM EDT | 268.1 h | 4: design direction |
 
 ## Phase plan (budgeted backwards, hackathon-win Phase 4 table)
 
@@ -45,7 +45,7 @@ Running log for the unattended cloud build. A resumed session starts here.
 - Read CLAUDE.md, HACKATHON.md, PROMPT.md, hackathon-win SKILL.md + references + templates.
 - Created this file.
 
-### Phases 1–3: research + concept (Wed Sep 23 · 10:45 → 11:50 PM EDT · 267.1 h left)
+### Phases 1–3: research + concept (Wed Sep 23 · 10:40 → 10:51 PM EDT · 268.2 h left)
 - Devpost is blocked by the egress policy, so research went through WebSearch plus cloned repos (see RESEARCH-BRIEF › limits).
 - Organiser is most likely the **Webb Schools CS Club** (ushackathons listing: Sep 4 to Oct 5, 2026, online, HS); first edition. HACKATHON.md › Verification added.
 - Competitors found and read: **PACE** (workload planner, Next.js + Appwrite), plus two beginner repos.

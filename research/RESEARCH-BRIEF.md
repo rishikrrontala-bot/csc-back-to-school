@@ -1,6 +1,6 @@
 # Research brief: CSC Back-to-School Hackathon
 
-*Full-depth pass (268 h to the deadline), Wed Sep 23 2026, 22:40 to 23:40 EDT. Searches batched in parallel, inline (no subagents).*
+*Full-depth pass (268 h to the deadline), Wed Sep 23 2026, 22:40 to 22:49 EDT by the clock. Searches batched in parallel, inline (no subagents).*
 
 ## How this research was done, and its limits (read first)
 This cloud VM's network policy **blocks devpost.com and every \*.devpost.com page** for both `curl` and WebFetch. So are youtube.com, wikipedia.org, huggingface.co, cdn.jsdelivr.net, unpkg.com, reddit, medium and dev.to, and the GitHub search API. What works: WebSearch (server-side), `git clone` of public GitHub repos, npm, PyPI and Google Fonts. Consequences:

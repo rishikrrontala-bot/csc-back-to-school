@@ -1,6 +1,6 @@
 # Concepts: three candidates, scored
 
-*Wed Sep 23 2026, 23:45 EDT · 267 h to the deadline. Rishik delegated the pick (CLAUDE.md › Override), so the highest weighted score wins.*
+*Wed Sep 23 2026, 22:50 EDT · 268 h to the deadline. Rishik delegated the pick (CLAUDE.md › Override), so the highest weighted score wins.*
 
 ## Rubric and weights
 The event publishes five criteria but no weights, so each is weighted **20%** (HACKATHON.md). Scores run 1–5 per criterion, and the weighted score is their mean.
